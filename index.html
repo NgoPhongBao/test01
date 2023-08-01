@@ -26,32 +26,32 @@
     <button style="color: green">Click</button>
 
     <script>
-      window.addEventListener("load", () => {
-        registerSW();
-      });
+      // window.addEventListener("load", () => {
+      //   registerSW();
+      // });
 
-      // Register the Service Worker
-      async function registerSW() {
-        if ("serviceWorker" in navigator) {
-          try {
-            await navigator.serviceWorker.register("serviceworker.js");
-          } catch (e) {
-            console.log("SW registration failed");
-          }
-        }
-      }
+      // // Register the Service Worker
+      // async function registerSW() {
+      //   if ("serviceWorker" in navigator) {
+      //     try {
+      //       await navigator.serviceWorker.register("serviceworker.js");
+      //     } catch (e) {
+      //       console.log("SW registration failed");
+      //     }
+      //   }
+      // }
 
-      window.addEventListener("beforeinstallprompt", (e) => {
-        console.log("SDFs")
-        // Prevent the mini-infobar from appearing on mobile
-        e.preventDefault();
-        // Stash the event so it can be triggered later.
-        deferredPrompt = e;
-        // Update UI notify the user they can install the PWA
-        showInstallPromotion();
-        // Optionally, send analytics event that PWA install promo was shown.
-        console.log(`'beforeinstallprompt' event was fired.`);
-      });
+      // window.addEventListener("beforeinstallprompt", (e) => {
+      //   console.log("SDFs")
+      //   // Prevent the mini-infobar from appearing on mobile
+      //   e.preventDefault();
+      //   // Stash the event so it can be triggered later.
+      //   deferredPrompt = e;
+      //   // Update UI notify the user they can install the PWA
+      //   showInstallPromotion();
+      //   // Optionally, send analytics event that PWA install promo was shown.
+      //   console.log(`'beforeinstallprompt' event was fired.`);
+      // });
     </script>
     <script src="script.js"></script>
   </body>
