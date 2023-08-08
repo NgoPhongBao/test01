@@ -1,4 +1,14 @@
 const btn = document.querySelector("button");
+window.addEventListener(
+  "message",
+  (event) => {
+    console.log(event)
+
+    // …
+  },
+  false,
+);
+
 btn.addEventListener("click", async () => {
   console.log("ok")
     // window.close();
